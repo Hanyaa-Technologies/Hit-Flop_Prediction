@@ -38,7 +38,7 @@ def extract_features(file_path):
             'tempo': tempo
         }
 
-        for i in range(1, 21):
+        for i in range(1, 21): # 1 to 20 are mfcc features, for each mfcc it computes mean value across entire duration of audio and stores in features
             features[f'mfcc{i}'] = np.mean(mfccs[i-1])
 
         return features
